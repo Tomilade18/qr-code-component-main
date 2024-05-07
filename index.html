@@ -2,37 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | QR code component</title>
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
     body {
-      display: flex;
-      justify-content: center;
-      background-color: rgba(255, 255, 255, 0.5);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+      background-color: hsl(212, 45%, 89%);
+      margin: 0; /* Added to reset default margin */
+      padding: 0; /* Added to reset default padding */
     }
     .attribution {
-      display: flex;
-      align-items: center;
-       /* font-size: 11px; text-align: center; */
-      width: 320px; height: 497px; 
-    background-color: rgb(255, 255, 255);}
+      display: grid;
+      justify-content: center; /* Centering horizontally */
+      align-items: center; /* Centering vertically */
+      height: 100vh; /* Making attribution div occupy full height of the viewport */
+      background-color:hsl(0, 0%, 100%); /* Moved background color from .attribution to body */
+      width: 320px;
+      height: 497px;
+      border-radius: 20px;
+    }
     .qr {
       width: 288px;
       height: 288px;
     }
-    .qr img {height: 100%; width: 100%; } 
- 
+    .qr img {
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .text {
+      width: 288px;
+      height: 129px;
+    }
+   .first-text {
+      color: hsl(218, 44%, 22%);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .second-text {
+      color: hsl(220, 15%, 55%);
+      font-size: 15px;
+      font-weight: 400;
+    }
   </style>
 </head>
 <body>
   <div class="attribution">
     <div class="qr">
       <img src="./images/image-qr-code.png" alt="">
+    </div>
+    <div class="text">
+      <p class="first-text">Improve your front-end skills by building projects</p>
+      <p class="second-text">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
     </div>
   </div>
 </body>
